@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Play, RotateCcw, Eye, EyeClosed } from 'lucide-react';
 
 function App() {
@@ -44,9 +44,11 @@ function App() {
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center p-4">
 			<div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg">
-				<h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-					CELPIP Speaking Countdown Timer
-				</h1>
+				{!hideOptions &&
+					<h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+						CELPIP Speaking Countdown
+					</h1>
+				}
 
 				<div className="space-y-6">
 					{/* Duration Selection */}
@@ -101,7 +103,7 @@ function App() {
 
 						<button
 							onClick={toggleHideOptions}
-							className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+							className="flex items-center gap-2 px-6 py-3 text-slate-500 rounded-lg hover:bg-slate-100 transition-colors"
 						>
 							{hideOptions ? <Eye size={20} /> : <EyeClosed size={20} />}
 							<span>
@@ -110,7 +112,7 @@ function App() {
 						</button>
 						<button
 							onClick={handleReset}
-							className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+							className="flex items-center gap-2 px-6 py-3  text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
 						>
 							<RotateCcw size={20} />
 							<span>Reset</span>
@@ -118,13 +120,16 @@ function App() {
 						<button
 							onClick={handlePlay}
 							disabled={isRunning || timeLeft === 0}
-							className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+							className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
 						>
 							<Play size={20} />
 							<span>Play</span>
 						</button>
 					</div>
 				</div>
+			</div>
+			<div className="absolute bottom-0  mb-4 text-blue-600">
+				Made with ❤️
 			</div>
 		</div>
 	);
