@@ -129,7 +129,7 @@ function App() {
 				</div>
 			</div>
 			<div className="absolute bottom-0  mb-4 text-blue-600">
-				Made with ❤️
+				<a href="https://candidosales.me/" target="_blank" rel="noreferrer">Made with ❤️</a>
 			</div>
 		</div>
 	);
