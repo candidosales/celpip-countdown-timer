@@ -104,6 +104,7 @@ function App() {
 
 
 						<button
+							type='button'
 							onClick={toggleHideOptions}
 							className="flex justify-center items-center gap-2 px-6 py-3 text-slate-500 rounded-lg hover:bg-slate-100 transition-colors"
 						>
@@ -113,6 +114,7 @@ function App() {
 							</span>
 						</button>
 						<button
+							type='button'
 							onClick={handleReset}
 							className="flex justify-center items-center gap-2 px-6 py-3  text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
 						>
@@ -120,6 +122,7 @@ function App() {
 							<span className='hidden md:block'>Reset</span>
 						</button>
 						<button
+							type='button'
 							onClick={handlePlay}
 							disabled={isRunning || timeLeft === 0}
 							className="flex justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
