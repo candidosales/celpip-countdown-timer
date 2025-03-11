@@ -53,7 +53,7 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center p-4">
+		<div className="min-h-screen bg-linear-to-br from-indigo-100 to-blue-100 flex items-center justify-center p-4">
 			<div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg transition-all">
 				{!hideOptions &&
 					<h1 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 text-center">
@@ -94,7 +94,7 @@ function App() {
 					<div className="h-5 bg-gray-200 overflow-hidden flex items-center">
 						<div className='text-xs ml-1 opacity-30 absolute'>{formatTime(duration)}</div>
 						<div
-							className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-linear"
+							className="h-full bg-linear-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-linear"
 							style={{ width: `${progress}%`, background: "#04c9fa" }}
 						/>
 					</div>
