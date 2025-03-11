@@ -28,7 +28,7 @@ export default function AssessmentRubric() {
 			<div className="border border-gray-800">
 				{/* Scoring levels header */}
 				<div className="grid grid-cols-4 border-b border-gray-800">
-					{["0 - no attempt", "1 - poor attempt", "2 - adequate", "3 - good"].map((level, index) => (
+					{["0 - no attempt", "1 - poor attempt", "2 - adequate", "3 - good"].map((level,) => (
 						<div
 							key={level}
 							className="p-3 text-center bg-gray-200 border-r last:border-r-0 border-gray-800 font-medium"
