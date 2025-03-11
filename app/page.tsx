@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from 'react';
 import { Play, RotateCcw, Eye, EyeClosed } from 'lucide-react';
 
@@ -12,7 +14,9 @@ const durationOptions = [{
 	value: 90
 }];
 
-function App() {
+
+export default function Home() {
+
 	const [duration, setDuration] = useState<30 | 60 | 90>(60);
 	const [timeLeft, setTimeLeft] = useState<number>(duration);
 	const [isRunning, setIsRunning] = useState(false);
@@ -54,6 +58,7 @@ function App() {
 
 	return (
 		<div className="min-h-screen bg-linear-to-br from-indigo-100 to-blue-100 flex items-center justify-center p-4">
+
 			<div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg transition-all">
 				{!hideOptions &&
 					<h1 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 text-center">
@@ -72,7 +77,7 @@ function App() {
 										className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-indigo-500"
 										checked={duration === value}
 										onChange={() => {
-											setDuration(value);
+											setDuration(value as 30 | 60 | 90);
 											setTimeLeft(value);
 										}}
 										disabled={isRunning}
@@ -133,11 +138,6 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="absolute bottom-0  mb-4 text-blue-600">
-				<a href="https://candidosales.me/" target="_blank" rel="noreferrer">Made with ❤️</a>
-			</div>
 		</div>
 	);
 }
-
-export default App;
