@@ -2,9 +2,24 @@
 
 import AssessmentRubric from "@/components/assessment-rubric"
 import TableChecklist from "@/components/table-checklist"
-import Task1 from "@/components/task-1"
 
 export default function Checklist() {
+
+	const task1Items = [
+		"Did your partner speak for 90 seconds?",
+		"Did your partner speak directly?",
+		"Was your partners advice clear and polite?",
+		"Was it easy to follow? Were both pros and cons presented?",
+		"Did your partner conclude with an appropriate closing remark?"
+	]
+
+	const task2Items = [
+		"Did your partner speak for 60 seconds?",
+		"Did your partner speak directly?",
+		"Was your partners advice clear and polite?",
+		"Was it easy to follow? Were both pros and cons presented?",
+		"Did your partner conclude with an appropriate closing remark?"
+	]
 
 	const task3Items = [
 		"Your partner set the scene.",
@@ -49,15 +64,18 @@ export default function Checklist() {
 		"Your partner had a concluding sentence to complete the response.",
 	]
 	return (
-		<div className="max-w-4xl mx-auto p-6  space-y-8">
-
-			<Task1 />
-			<TableChecklist title={"3 - Describing a Scene"} taskNumber={3} items={task3Items} />
-			<TableChecklist title={"4 - Making predictions"} taskNumber={4} items={task4Items} />
-			<TableChecklist title={"5 - Comparing and Persuading"} taskNumber={5} items={task5Items} />
-			<TableChecklist title={"6 - Dealing with a Difficult Situation"} taskNumber={6} items={task6Items} />
-			<TableChecklist title={"7 - Expressing Opinions"} taskNumber={7} items={task7Items} />
-			<AssessmentRubric />
+		<div className="w-full">
+			<div className="max-w-4xl mx-auto p-6  space-y-8">
+				<TableChecklist title={"1 - Giving Advice"} taskNumber={1} items={task1Items} />
+				<TableChecklist title={"2 - Talking about a Personal experience"} taskNumber={2} items={task2Items} />
+				<TableChecklist title={"3 - Describing a Scene"} taskNumber={3} items={task3Items} />
+				<TableChecklist title={"4 - Making predictions"} taskNumber={4} items={task4Items} />
+				<TableChecklist title={"5 - Comparing and Persuading"} taskNumber={5} items={task5Items} />
+				<TableChecklist title={"6 - Dealing with a Difficult Situation"} taskNumber={6} items={task6Items} />
+				<TableChecklist title={"7 - Expressing Opinions"} taskNumber={7} items={task7Items} />
+				<AssessmentRubric />
+				<p className="text-center text-sm py-8">Based on CELPIP Speaking Workbook - Third Edition</p>
+			</div>
 		</div>
 	)
 }

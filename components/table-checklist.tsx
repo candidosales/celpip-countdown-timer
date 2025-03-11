@@ -11,7 +11,6 @@ interface ChecklistProps {
 export default function TableChecklist({ taskNumber, items, title }: ChecklistProps) {
 	return (
 		<>
-			<h1 className="text-2xl font-bold mb-4">{title}</h1>
 			<div className="border border-gray-800">
 				<div className="grid grid-cols-[100px_1fr]">
 					{/* Header row */}
@@ -19,16 +18,16 @@ export default function TableChecklist({ taskNumber, items, title }: ChecklistPr
 						<span className="font-medium">✓ or ✗</span>
 					</div>
 					<div className="bg-gray-300 border-b border-gray-800 p-3">
-						<h2 className="text-xl font-bold">Checklist for Speaking Task {taskNumber}</h2>
+						<h2 className="text-xl font-bold">{title}</h2>
 					</div>
 
 					{/* Checklist Items */}
 					{items.map((text, index) => (
 						<React.Fragment key={`task${taskNumber}-${index}`}>
-							<div className="border-b border-r border-gray-800 flex items-center justify-center">
+							<div className="border-b border-r border-gray-800 flex items-center justify-center bg-white">
 								<Checkbox id={`task${taskNumber}-${index}`} className="h-5 w-5" />
 							</div>
-							<div className="border-b border-gray-800 p-3">
+							<div className="border-b border-gray-800 p-3 bg-white">
 								<p className="text-lg">{`${index + 1}. ${text}`}</p>
 							</div>
 						</React.Fragment>

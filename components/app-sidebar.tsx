@@ -10,14 +10,14 @@ import {
 	SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-import { Home, ListCheck, } from "lucide-react"
+import { ListCheck, Timer, } from "lucide-react"
 
 // Menu items.
 const items = [
 	{
-		title: "Home",
+		title: "Countdown",
 		url: "/",
-		icon: Home,
+		icon: Timer,
 	},
 	{
 		title: "Checklist",
