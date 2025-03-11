@@ -2,7 +2,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 export default function Task1() {
 	return (
-		<div className="max-w-4xl mx-auto p-6 ">
+		<>
 			<h1 className="text-2xl italic mb-6">Assess your partner's Speaking response.</h1>
 
 			<div className="border border-gray-800">
@@ -62,6 +62,6 @@ export default function Task1() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }

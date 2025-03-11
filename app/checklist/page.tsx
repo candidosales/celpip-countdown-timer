@@ -2,7 +2,6 @@
 
 import TableChecklist from "@/components/table-checklist"
 import Task1 from "@/components/task-1"
-import Task3 from "@/components/task-3"
 
 export default function Checklist() {
 
