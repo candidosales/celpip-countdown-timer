@@ -76,7 +76,7 @@ export default function Home() {
 										className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-indigo-500"
 										checked={duration === value}
 										onChange={() => {
-											setDuration(value);
+											setDuration(value as 30 | 60 | 90);
 											setTimeLeft(value);
 										}}
 										disabled={isRunning}
