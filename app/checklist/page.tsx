@@ -1,5 +1,6 @@
 "use client"
 
+import AssessmentRubric from "@/components/assessment-rubric"
 import TableChecklist from "@/components/table-checklist"
 import Task1 from "@/components/task-1"
 
@@ -56,6 +57,7 @@ export default function Checklist() {
 			<TableChecklist title={"5 - Comparing and Persuading"} taskNumber={5} items={task5Items} />
 			<TableChecklist title={"6 - Dealing with a Difficult Situation"} taskNumber={6} items={task6Items} />
 			<TableChecklist title={"7 - Expressing Opinions"} taskNumber={7} items={task7Items} />
+			<AssessmentRubric />
 		</div>
 	)
 }

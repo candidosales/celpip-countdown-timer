@@ -58,6 +58,7 @@ export default function Home() {
 
 	return (
 		<div className="min-h-screen bg-linear-to-br from-indigo-100 to-blue-100 flex items-center justify-center p-4">
+
 			<div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg transition-all">
 				{!hideOptions &&
 					<h1 className="text-lg md:text-3xl font-bold text-gray-800 mb-6 text-center">
@@ -136,9 +137,6 @@ export default function Home() {
 						</button>
 					</div>
 				</div>
-			</div>
-			<div className="absolute bottom-0  mb-4 text-blue-600">
-				<a href="https://candidosales.me/" target="_blank" rel="noreferrer">Made with ❤️</a>
 			</div>
 		</div>
 	);
